@@ -1,8 +1,3 @@
-Below is a **ready-to-paste `README.md`** written exactly in the style expected for a **GitHub repository**.
-You can copy this as-is into your repo.
-
----
-
 # Chat-sync
 
 A real-time communication web application supporting **text chat, voice calls, video calls**, and **media sharing**, built as a pet project to explore real-time backend systems, WebRTC, and scalable architecture.
