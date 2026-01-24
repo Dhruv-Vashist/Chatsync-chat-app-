@@ -1,10 +1,13 @@
 from fastapi import FastAPI
-import models
+from models import Register
 
 
 app = FastAPI()
 
+@app.post("/users/")
+def read_user(user : Register):
+    return {"user is successfully created" : user}
 
-@app.get("/models/{user}")
-def read_user(user: models.register):
-    return user
+@app.get("/users/{user}")
+def get_user(user: str):
+    return {"user": user}

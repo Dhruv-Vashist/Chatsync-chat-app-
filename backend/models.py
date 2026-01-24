@@ -1,30 +1,28 @@
 from pydantic import BaseModel
 from enum import Enum
 
-class status(str, Enum):
+class Status(str, Enum):
     completed = "completed"
     pending = "pending"
     in_progress = "in_progress"
 
-class profile(str, Enum):
+class Profile(str, Enum):
     admin = "admin"
     leader = "leader"
     member = "member"
     freelancer = "freelancer"
 
-class login(BaseModel):
+class Login(BaseModel):
     email: str
     password: str
 
-class register(BaseModel):
+class Register(BaseModel):
     email: str
     password: str
     username: str|None = None
     full_name: str
 
-class tasks(BaseModel):
+class Tasks(BaseModel):
     user: str
     task: str
-    status: str|None = status.pending
-
-class 
+    status: Status|None = Status.pending
